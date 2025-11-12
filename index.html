@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Damon Cael — OUT OF THIS WORLD</title>
+
+  <!-- SEO / Share -->
+  <meta name="description" content="Damon Cael — OUT OF THIS WORLD. Stream the album and watch the official music video." />
+  <meta property="og:title" content="Damon Cael — OUT OF THIS WORLD" />
+  <meta property="og:description" content="Stream the album and watch the official music video." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="assets/img/og-cover.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="theme-color" content="#27194a" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;500;700&display=swap" rel="stylesheet" />
+
+  <!-- Favicon -->
+  <link rel="icon" href="assets/icons/favicon.ico" />
+
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+  <!-- Hero -->
+  <header class="hero">
+    <!-- Video background -->
+    <div class="hero__media">
+      <video class="hero__video" autoplay muted loop playsinline preload="auto" poster="assets/video/poster.jpg">
+        <source src="assets/video/loop.webm" type="video/webm" />
+        <source src="assets/video/loop.mp4" type="video/mp4" />
+      </video>
+      <div class="hero__overlay"></div>
+    </div>
+
+    <div class="hero__content container">
+      <h1 class="brand">Damon Cael</h1>
+      <p class="tagline">OUT OF THIS WORLD — debut album out now</p>
+
+      <nav class="cta">
+        <!-- Replace these hrefs with your live links -->
+        <a class="btn" href="https://open.spotify.com/album/REPLACE" target="_blank" rel="noopener">Listen on Spotify</a>
+        <a class="btn btn--alt" href="https://music.apple.com/album/REPLACE" target="_blank" rel="noopener">Apple Music</a>
+        <a class="btn btn--ghost" href="#video">Watch Video</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- Micro bio -->
+    <section class="section container">
+      <p class="bio">
+        Damon Cael is a next-gen pop artist with cinematic, rebellious energy.
+        The music blends high-fashion aesthetics with dark-pop pulse—made to move a crowd and break a mold.
+      </p>
+    </section>
+
+    <!-- YouTube embed -->
+    <section id="video" class="section section--video container">
+      <h2>Turn Me On (Lose Control)</h2>
+      <div class="embed">
+        <!-- Replace YOUR_VIDEO_ID -->
+        <iframe
+          src="https://www.youtube.com/embed/YOUR_VIDEO_ID?rel=0&modestbranding=1"
+          title="Turn Me On (Lose Control) — Official Music Video"
+          loading="lazy"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen>
+        </iframe>
+      </div>
+      <p class="caption">Watch the Official Music Video</p>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <small>© 2025 Damon Cael, HDD Records All rights reserved.</small>
+    </div>
+  </footer>
+
+  <!-- Reduced motion fallback: pause background video -->
+  <script>
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      const v = document.querySelector('.hero__video');
+      if (v) { v.removeAttribute('autoplay'); v.pause?.(); }
+    }
+  </script>
+</body>
+</html>
